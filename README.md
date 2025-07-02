@@ -1,12 +1,25 @@
-# React + Vite
+# CreaTuLanding1+TuApellido
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es la entrega 1 del curso de React: **React-Flex**.  
+Se trata de una landing page inicial para un e-commerce, construida con React. Contiene los primeros componentes básicos que servirán como base para el desarrollo futuro de la tienda online.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías usadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- CSS puro (sin frameworks externos)
+- Vite (para el entorno de desarrollo rápido)
 
-## Expanding the ESLint configuration
+## 📌 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Barra de navegación con:
+- Enlaces de navegación: Inicio, Productos, Contacto
+- Widget del carrito con ícono y contador dinámico (simulado)
+
+✅ Componente de bienvenida:
+- `ItemListContainer` recibe un mensaje mediante **props**
+- Muestra un botón de acción que simula un catálogo
+
+✅ Estilos modernos:
+- NavBar sticky con sombra y hover en los links
+- Botón con efecto hover
+- Diseño responsivo básico
