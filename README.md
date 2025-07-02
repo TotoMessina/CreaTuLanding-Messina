@@ -1,4 +1,4 @@
-# CreaTuLanding1+TuApellido
+# Landing de E-commerce
 
 Este proyecto es la entrega 1 del curso de React: **React-Flex**.  
 Se trata de una landing page inicial para un e-commerce, construida con React. Contiene los primeros componentes básicos que servirán como base para el desarrollo futuro de la tienda online.
