@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getProductos } from '../data/data';
+import ItemList from './ItemList';
 
-const ItemListContainer = ({ greeting }) => {
-  const [loading, setLoading] = useState(true);
+function ItemListContainer({ mensaje }) {
+  const { idCategoria } = useParams();
+  const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+    getProductos().then((res) => {
+      if (idCategoria) {
+        setProductos(res.filter((prod) => prod.categoria === idCategoria));
+      } else {
+        setProductos(res);
+      }
+    });
+  }, [idCategoria]);
 
   return (
-    <div className="item-container">
-      {loading ? <p>Cargando productos...</p> : (
-        <>
-          <h1>{greeting}</h1>
-          <p>Descubrí los mejores productos a los mejores precios.</p>
-          <button onClick={() => alert('¡Pronto podrás ver nuestros productos!')}>
-            Ver catálogo
-          </button>
-        </>
-      )}
-    </div>
+    <main className="main-content">
+      {mensaje && <h2>{mensaje}</h2>}
+      <ItemList productos={productos} />
+    </main>
   );
-};
+}
 
 export default ItemListContainer;
